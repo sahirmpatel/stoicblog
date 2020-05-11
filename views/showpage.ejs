@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+<div class="container" style="margin:10%">
+    <div class="jumbotron" style="margin-top: 100px;">
+        <h3 class=""><%= blog.title %></h3><br>
+        <img src="<%=blog.image%>" alt="image"><br>
+        <span><%= blog.created %></span><br>
+        <p><%- blog.body%></p>
+    </div>
+    <a class="btn btn-info" href="/blogs/<%=blog._id%>/edit">Edit</a>
+    <form style="display: inline;" action="/blogs/<%=blog._id%>?_method=DELETE" method="post">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer"); -%>
